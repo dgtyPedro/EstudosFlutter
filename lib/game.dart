@@ -5,12 +5,12 @@ import 'dart:async';
 import 'plane.dart';
 import 'dart:developer';
 
-class HomePage extends StatefulWidget {
+class MyGame extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _MyGameState createState() => _MyGameState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _MyGameState extends State<MyGame> {
   static double planeYaxis = 0;
   static double planeXaxis = 0;
   double time = 0;

@@ -109,7 +109,10 @@ class _MyGameState extends State<MyGame> {
                         duration: Duration(milliseconds: 0),
                         child: MyPlane(),
                       ),
-                      Meteors(),
+                      Meteors(
+                        planeX: planeXaxis,
+                        planeY: planeYaxis,
+                      ),
                     ],
                   ),
                 ),

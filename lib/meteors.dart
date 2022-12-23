@@ -5,6 +5,11 @@ import 'dart:math';
 import 'dart:core';
 
 class Meteors extends StatefulWidget {
+  final double planeX;
+  final double planeY;
+
+  Meteors({Key? key, required this.planeX, required this.planeY}) : super(key: key);
+
   @override
   _MeteorsState createState() => _MeteorsState();
 }
@@ -26,7 +31,10 @@ class _MeteorsState extends State<Meteors> {
         yAxis = yAxis + yMovement;
         xAxis = xAxis + xMovement;
       });
-      if (yAxis > screenHeight || xAxis > screenWidth || yAxis < 0 || xAxis < 0) {
+      if (yAxis > screenHeight ||
+          xAxis > screenWidth ||
+          yAxis < 0 ||
+          xAxis < 0) {
         int genSpawn = random.nextInt(4);
         switch (genSpawn) {
           case 0:
